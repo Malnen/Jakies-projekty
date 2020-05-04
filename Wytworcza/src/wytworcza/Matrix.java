@@ -8,16 +8,16 @@ public abstract class Matrix {
         sampleMatrix = createMatrix(x, y);
     }
 
-    protected Vector<Integer>[][] sampleMatrix;
+    protected Vector<Element>[][] sampleMatrix;
 
-    abstract protected Vector<Integer>[][] createMatrix(int x, int y);
+    abstract protected Vector<Element>[][] createMatrix(int x, int y);
 
     protected void print() {
 
-        for (Vector<Integer>[] v : sampleMatrix) {
+        for (Vector<Element>[] v : sampleMatrix) {
             System.out.print("|");
-            for (Vector<Integer> v2 : v) {
-                System.out.print(" " + v2.get(0) + " " + v2.get(1));
+            for (Vector<Element> v2 : v) {
+                System.out.print(" " + v2.get(0).value + " " + v2.get(1).value);
             }
             System.out.println(" |");
         }
