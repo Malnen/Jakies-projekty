@@ -6,14 +6,12 @@ public class Wytworcza {
 
     public static void main(String[] args) {
 
-        Matrix sm = new SparseMatrix(new Vector[4][7]);
-        sm.createMatrix();
+        Matrix sm = new SparseMatrix(4, 7);
         sm.print();
         
         System.out.println("");
         
-        Matrix dm = new DenseMatrix(new Vector[12][12]);
-        dm.createMatrix();
+        Matrix dm = new DenseMatrix(12, 12);
         dm.print();
         
         

@@ -4,15 +4,16 @@ import java.util.Vector;
 
 public class DenseMatrix extends Matrix {
 
-    public DenseMatrix(Vector<Integer>[][] matrix) {
-        super(matrix);
+    public DenseMatrix(int x, int y) {
+        super(x, y);
     }
 
     @Override
-    public void createMatrix() {
+    public Vector<Integer>[][] createMatrix(int x, int y){
 
-        int limit = (int) (sampleMatrix.length * sampleMatrix[0].length) / 2;
-        sampleMatrix = new Vector[sampleMatrix.length][sampleMatrix[0].length];
+        Vector<Integer>[][] sampleMatrix = new Vector[x][y];
+        int limit = (int) (x * y) / 2;
+        sampleMatrix = new Vector[x][y];
         for (int i = 0; i < sampleMatrix.length; i++) {
             for (int j = 0; j < sampleMatrix[i].length; j++) {
                     sampleMatrix[i][j] = new Vector<Integer>();
@@ -26,5 +27,6 @@ public class DenseMatrix extends Matrix {
 
             }
         }
+        return sampleMatrix;
     }
 }

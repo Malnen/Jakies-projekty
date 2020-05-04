@@ -4,13 +4,13 @@ import java.util.Vector;
 
 public abstract class Matrix {
 
-    public Matrix(Vector<Integer>[][] matrix) {
-        sampleMatrix = matrix;
+    public Matrix(int x, int y) {
+        sampleMatrix = createMatrix(x, y);
     }
 
     protected Vector<Integer>[][] sampleMatrix;
 
-    abstract protected void createMatrix();
+    abstract protected Vector<Integer>[][] createMatrix(int x, int y);
 
     protected void print() {
 
