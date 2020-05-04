@@ -16,12 +16,11 @@ public class SparseMatrix extends Matrix {
         sampleMatrix = new Vector[sampleMatrix.length][sampleMatrix[0].length];
         for (int i = 0; i < sampleMatrix.length; i++) {
             for (int j = 0; j < sampleMatrix[i].length; j++) {
-                if (i == j) {
                     sampleMatrix[i][j] = new Vector<Integer>();
+                if (i == j) {
                     sampleMatrix[i][j].add(1);
                     sampleMatrix[i][j].add(1);
                 } else {
-                    sampleMatrix[i][j] = new Vector<Integer>();
                     sampleMatrix[i][j].add(0);
                     sampleMatrix[i][j].add(0);
                 }
