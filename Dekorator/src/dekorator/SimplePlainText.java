@@ -3,10 +3,10 @@ package dekorator;
 public class SimplePlainText extends PlainText {
 
     public SimplePlainText(String s) {
-        text = s;
+        super(s);
     }
 
     public void write() {
-        System.out.println(text);
+        System.out.print(text);
     }
 }

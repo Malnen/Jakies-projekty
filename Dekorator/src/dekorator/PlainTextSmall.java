@@ -3,11 +3,13 @@ package dekorator;
 public class PlainTextSmall extends PlainTextDecorator {
 
     PlainTextSmall(PlainText pt) {
-        super(pt, "small");
+        super(pt);
     }
 
     @Override
     public void write() {
-        super.write();
+        System.out.print("<small>");
+        super.write();       
+        System.out.print("</small>");
     }
 }

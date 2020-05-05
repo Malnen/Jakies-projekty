@@ -48,5 +48,6 @@ public class Dekorator {
             }
         } while (choice != 6);
         pt.write();
+        System.out.println("");
     }
 }

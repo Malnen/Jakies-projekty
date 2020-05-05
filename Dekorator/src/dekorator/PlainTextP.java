@@ -3,11 +3,13 @@ package dekorator;
 public class PlainTextP extends PlainTextDecorator {
 
     PlainTextP(PlainText pt) {
-        super(pt, "p");
+        super(pt);
     }
 
     @Override
     public void write() {
-        super.write();
+        System.out.print("<p>");
+        super.write();       
+        System.out.print("</p>");
     }
 }

@@ -3,11 +3,13 @@ package dekorator;
 public class PlainTextStrong extends PlainTextDecorator {
 
     PlainTextStrong(PlainText pt) {
-        super(pt, "strong");
+        super(pt);
     }
 
     @Override
     public void write() {
-        super.write();
+        System.out.print("<strong>");
+        super.write();       
+        System.out.print("</strong>");
     }
 }
