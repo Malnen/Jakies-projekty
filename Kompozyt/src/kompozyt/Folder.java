@@ -17,11 +17,11 @@ public class Folder extends BaseClass {
     @Override
     public void dir() {
         for (BaseClass b : array) {
-            System.out.print("  " + b.name);
-            if (!b.type.equals("<DIR>")) {
-                System.out.print(".");
+            if (b.type.startsWith(".")) {
+                b.dir();                                    // wyswietlenie pliku
+            } else {
+                System.out.println("--" + b.name + b.type); // wyswietlenie folderu
             }
-            System.out.println(b.type);
         }
     }
 
