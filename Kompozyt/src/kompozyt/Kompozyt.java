@@ -51,7 +51,7 @@ public class Kompozyt {
             command = s.nextLine();
             if (command.equals("cd ..")) {
                 if (currentFolder.parentFolder != null) {
-                    currentFolder = currentFolder.parentFolder;
+                    currentFolder = currentFolder.cd();
                 }
             } else if (command.startsWith("cd ")) {
                 if (currentFolder.cd(command.substring(3)) != null ) {

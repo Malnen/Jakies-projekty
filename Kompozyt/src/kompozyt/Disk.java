@@ -10,8 +10,4 @@ public class Disk extends Folder {
         super(name);
         this.letter = letter;
     }
-    @Override
-    void parentPath(Folder folder) {
-        System.out.print(((Disk)folder).letter + ":\\");
-    }
 }
