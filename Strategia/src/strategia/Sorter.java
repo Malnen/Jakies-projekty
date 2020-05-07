@@ -82,6 +82,7 @@ public class Sorter {
         randomFill(baseArray);
         System.out.println("Ilość elementów : " + nn + ", ");
         for (int s = 0; s < 4; s++) {
+            avgTime = 0;
             switch (s) {
                 case 0:
                     setSortStrategy(new JavaSortStrategy());
