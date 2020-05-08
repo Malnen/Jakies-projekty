@@ -25,20 +25,6 @@ public class Folder extends BaseClass {
         }
     }
 
-    public void displayPath() {
-        parentPath(this);
-        System.out.print(">");
-    }
-
-    void parentPath(Folder folder) {
-        if (folder.parentFolder != null) {
-            parentPath(folder.parentFolder);
-            System.out.print("\\" + folder.name);
-        } else {
-            System.out.print(((Disk) folder).letter + ":");
-        }
-    }
-
     public Folder cd() {
         return parentFolder;
     }

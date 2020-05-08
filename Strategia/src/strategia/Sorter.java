@@ -51,8 +51,8 @@ public class Sorter {
         sortOnRandom(10, 100);
         sortOnRandom(10, 1000);
         sortOnRandom(10, 10000);
-        sortOnRandom(10, 100000); // okolo 13 sekund
-        sortOnRandom(10, 1000000); // okolo 130 sekund
+       // sortOnRandom(10, 100000); // okolo 13 sekund
+       // sortOnRandom(10, 1000000); // okolo 1300 sekund (21 minut)
 
         System.out.println("");
 
@@ -62,20 +62,21 @@ public class Sorter {
         sortOnRandom(10, 100);
         sortOnRandom(10, 1000);
         sortOnRandom(10, 10000);
-        sortOnRandom(10, 100000);
-        sortOnRandom(10, 1000000);
+       // sortOnRandom(10, 100000); // okolo 15 sekund
+       // sortOnRandom(10, 1000000); // okolo 1300 sekund 
     }
 
     public void testOnSameArray() {
-        sortOnSame(10,10);
-        sortOnSame(10,100);
-        sortOnSame(10,1000);
-        sortOnSame(10,10000);
-        sortOnSame(10,100000);
+        sortOnSame(10, 10);
+        sortOnSame(10, 100);
+        sortOnSame(10, 1000);
+        sortOnSame(10, 10000);
+        //sortOnSame(10, 100000);
+        //sortOnSame(10, 1000000);
     }
 
     void sortOnSame(int n, int nn) {// n ilosc powtorzen nn ilosc elementow
-        double avgTime = 0;
+        long avgTime = 0;
         long startTime;
         long sortTime;
         int baseArray[] = new int[nn];
@@ -115,7 +116,7 @@ public class Sorter {
     }
 
     void sortOnRandom(int n, int nn) {// n ilosc powtorzen nn ilosc elementow
-        double avgTime = 0;
+        long avgTime = 0;
         long startTime;
         long sortTime;
 
@@ -136,7 +137,7 @@ public class Sorter {
     void randomFill(int array[]) {
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (random.nextDouble() * array.length * 10);
+            array[i] = (int) (random.nextDouble() * 100000);
         }
     }
 

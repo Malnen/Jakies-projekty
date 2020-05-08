@@ -6,7 +6,10 @@ public class Strategia {
 
         Sorter sorter = new Sorter();
         sorter.testOnRandomArrays();
-        //sorter.testOnSameArray();
+        System.out.println("");
+        sorter.testOnSameArray();
+        
+        // dla wiekszych ilosci test trwal zbyt dlugo, ale sredni czas jest zapisany w komentarzu w metodzie
     }
 
 }
