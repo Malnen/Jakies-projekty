@@ -20,13 +20,14 @@ public abstract class BaseClass {
     }
 
     protected void parentPath(Object obj) {
+        if ((BaseClass) obj != null) {
             if (((BaseClass) obj).parentFolder != null) {
                 parentPath(((BaseClass) obj).parentFolder);
                 System.out.print("\\" + ((BaseClass) obj).name);
-            }
-            else if (((Disk) obj).letter != null) {
+            } else if (((Disk) obj).letter != null) {
                 System.out.print(((Disk) obj).letter + ":");
             }
+        }
     }
 
 }
